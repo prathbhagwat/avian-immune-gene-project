@@ -1,0 +1,34 @@
+---
+title: "Biometry Intro"
+author: "Prathmesh Bhagwat"
+date: "2025-04-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Introduction
+
+Understanding gene expression in parasites is crucial for studying host-pathogen interactions. My thesis project investigates immune gene expression in birds co-infected with Leucocytozoon parasites and Matryoshka viruses. However, for this Biometry assignment, I am using a public RNA-seq dataset on Babesia bovis as a placeholder to simulate the analysis workflow.
+
+This substitution allows me to practice working with metadata, loading data in R, and preparing for future transcriptomic analysis using avian samples.
+
+
+## Research Question & Aims
+
+### Research Question:
+How does gene expression vary across two life stages of Babesia bovis (merozoite vs. kinete)?
+
+### Aim 1:
+Load and explore RNA-seq sample metadata for 6 samples of Babesia bovis.
+
+### Aim 2:
+Simulate differential gene expression comparison between merozoite and kinete stages using metadata.
+
+```{r load-data}
+dataset <- read.csv("data/SraRunTable.csv")
+head(dataset)
+```
