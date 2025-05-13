@@ -501,6 +501,6 @@ This analysis explored differential gene expression patterns associated with sim
 
 ## References
 
-1. Faircloth, C. (2024). Barn Owl RNA-seq dataset. [Citation details]
+1. Faircloth, C. (2024). Barn Owl RNA-seq dataset. 
 2. Love, M.I., Huber, W., Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15, 550. https://doi.org/10.1186/s13059-014-0550-8
 3. Pertea, M., Kim, D., Pertea, G.M., Leek, J.T., Salzberg, S.L. (2016). Transcript-level expression analysis of RNA-seq experiments with HISAT, StringTie and Ballgown. Nature Protocols, 11(9), 1650-1667.
