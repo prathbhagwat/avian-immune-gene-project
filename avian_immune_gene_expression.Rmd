@@ -476,13 +476,15 @@ knitr::kable(detailed_results,
 
 ## Discussion
 
-In this analysis, I examined differential gene expression patterns between simulated co-infection with **Leucocytozoon** and **Matryoshka virus** and **uninfected barn owls using RNA-seq data.** I didn't find any statistically significant differentially expressed genes at our threshold (adjusted p-value < 0.05 and |log2FC| > 1).
+I wanted to see if barn owls infected with both a parasite and a virus had different gene expression compared to uninfected owls. After analyzing almost 19,000 genes from 6 barn owls, I didn't find any genes that were significantly different between the groups.
+However, I did notice some interesting things:
 
-Even though we didn't find statistically significant results, we still checked some interesting patterns. Some genes like TLR7 and MX1 showed different expression between infected and uninfected birds. These genes are important in bird immune responses - TLR7 helps detect RNA viruses like Matryoshka virus, and both genes play roles in fighting parasites too. The small sample size (only 6 birds) probably made it hard to find significant differences.
+A1CF was the most different gene - it was only turned on in healthy owls but completely off in infected owls
+A4GALT was slightly higher in infected owls
+When I made a heatmap, the infected and uninfected owls grouped separately, which suggests there might be real differences that I just couldn't prove statistically
 
-The volcano plot shows the distribution of differentially expressed genes, with significant genes highlighted and labeled. The boxplots tells the consistent expression differences in top genes across the co-infection status groups, while the heatmap reveals clustering patterns that effectively separate co-infected from uninfected samples based on gene expression profiles.
-
-So analysis suggests some potential patterns in gene expression between co-infected and uninfected barn owls, even though they weren't statistically significant. The genes with the most noticeable expression differences might play roles in immune responses against both parasites and viruses. For example, TLR7 and MX1 showed higher expression in co-infected birds, and these genes help birds fight both viral and parasitic infections
+The main problem was that I only had 6 owls (3 infected, 3 healthy). This is too small a sample to find significant differences, especially when looking at so many genes at once.
+My results suggest that future studies should use at least 15-20 owls per group to have enough power to detect these differences. While I didn't find significant results, the patterns I saw indicate that co-infection might still affect gene expression in ways worth exploring further.
 
 ## Limitations
 
