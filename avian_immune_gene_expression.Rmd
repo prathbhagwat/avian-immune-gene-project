@@ -31,6 +31,13 @@ Understanding gene expression patterns in birds is essential for investigating h
 
 **Alternative Hypothesis (H1)**: Immune gene expression significantly differs between co-infected and uninfected barn owls.
 
+## Dataset
+
+* RNA-seq gene count data from 6 barn owl individuals
+* Original data comes from Caroline Faircloth's project
+* For this Biometry course project, I used the existing dataset but simulated infection status (3 co-infected, 3 uninfected) to demonstrate statistical analysis techniques
+
+
 ## Statistical approach
 
 To complete the research question, I will:
