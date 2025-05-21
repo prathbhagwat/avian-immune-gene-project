@@ -1,46 +1,56 @@
-# Project Title
+# Avian Immune Gene Expression Project
 
-## Short description of the dataset
+This project explores immune gene expression in barn owls (*Tyto alba*) simulated as co-infected with **Leucocytozoon** parasites and **Matryoshka virus**. It was completed as part of my Biometry final project and forms the foundation for my master’s thesis on host-parasite-virus interactions.
 
-[Provide a brief, high-level overview of the dataset. What kind of data is it? What is its primary purpose or subject?]
+## Project Aim
+**Research Question**  
+How does immune gene expression vary between barn owls simulated as co-infected versus uninfected?
 
-## Link to original data source
+**Hypothesis**  
+There is a significant difference in immune gene expression between co-infected and uninfected owls.
 
-The original data for this project can be found at:
-[Insert Link to Caroline’s project here]
+## Dataset
+ * RNA-seq gene count data from **6 barn owl individuals**
+ * Original data comes from Caroline Faircloth's project
+ * For this Biometry course project, I used the existing dataset but **simulated infection status** (3 co-infected, 3 uninfected) to demonstrate statistical analysis techniques
 
-This dataset is based on or derived from the work done in Caroline's project. Please refer to the original source for more comprehensive details and context.
+## Statistical Approach
+ * Welch's t-tests used for differential expression
+ * Adjusted p-values using Benjamini-Hochberg correction
+ * Genes filtered by significance (padj < 0.05) and log2FC > 1
 
-## Description of simulated infection metadata
+ **Visualizations created:**
+ 
+  * Volcano plot (primary figure)
+  * Boxplots of top genes
+  * Clustered heatmap
 
-[Explain the simulated infection metadata. What variables are included? What do they represent? How was this metadata generated or what does it simulate?]
+## Key Findings
+While no genes reached statistical significance (likely due to small sample size), several patterns emerged:
+* A1CF gene was expressed in uninfected owls but completely silenced in infected owls
+* Hierarchical clustering in the heatmap showed separation between infected/uninfected samples
+* Results suggest future studies should use larger sample sizes (15-20 owls per group)
 
-Key metadata fields might include:
-*   `patient_id`: Unique identifier for each simulated patient.
-*   `infection_status`: (e.g., infected, not_infected, recovered)
-*   `time_point`: (e.g., day_0, day_1, day_7 post-infection)
-*   `treatment_group`: (e.g., placebo, drug_a, drug_b)
-*   ... [add other relevant metadata fields]
+## Limitations
 
-## Gene Expression Data (`gene_expression_data.csv`)
+* Infection status was simulated, not experimentally verified
+* Small sample size (n = 6) limits statistical power
+* No pathway or functional annotation analysis included
+* Results are exploratory and require validation through qPCR or other methods
 
-The `gene_expression_data.csv` file contains gene expression levels for the simulated subjects.
+## Repository Structure
+* `reads_per_gene/`: Directory containing RNA-seq gene count data
+* `avian_immune_gene_expression.Rmd`: R Markdown analysis code
+* `Immune Gene Expression in Barn Owls Co-infected with Leucocytozoon and Matryoshka Virus main.pdf`: Knitted output report
+* `README.md`: This file
 
-**File Description:**
-[Describe the structure of the CSV. Are genes in rows or columns? What do the values represent (e.g., normalized counts, TPMs)?]
+## How to Run
+1. Clone this repository
+2. Open `avian_immune_gene_expression.Rmd` in RStudio
+3. Install required R packages if not already installed:
+   ```r
+   install.packages(c("pheatmap", "ggplot2", "viridis", "dplyr"))
+4. Run the R Markdown document to reproduce the analysis   ```
 
-**Example Rows:**
-
-```csv
-gene_id,sample1_expression,sample2_expression,sample3_expression
-GENE_A,10.5,12.1,9.8
-GENE_B,0.5,1.2,0.9
-GENE_C,200.3,250.7,220.1
-...
-```
-
-*(Alternatively, if the file is very large, you can describe the columns instead of showing example rows)*
-
-**Column Descriptions (if not showing example rows):**
-*   `gene_id`: Identifier for the gene.
-*   `sample_X_expression`: Expression value for a given sample.
+## Author
+Prathmesh Bhagwat
