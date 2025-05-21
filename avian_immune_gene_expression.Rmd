@@ -1,7 +1,7 @@
 ---
 title: 'Immune Gene Expression in Barn Owls Co-infected with Leucocytozoon and Matryoshka Virus'
 author: "Prathmesh Bhagwat"
-date: "2025-04-07"
+date: "`r Sys.Date()`"
 output:
   pdf_document:
     toc: false
